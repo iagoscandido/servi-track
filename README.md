@@ -12,14 +12,32 @@ Este é um sistema web simples desenvolvido com **Spring Boot** e **PostgreSQL**
 - Gradle
 - Lombok
 
-## 🗃️ Funcionalidades
+## ✅ TODO List
 
-- Registro de atendimentos técnicos
-- Listagem de atendimentos com filtros
-- Atualização e remoção de registros
-- Geração de relatórios simples
-- Integração com banco de dados PostgreSQL
-- API RESTful
+### 📋 Funcionalidades Principais
+
+- [x] Criar estrutura básica do projeto com Spring Boot
+- [x] Configurar conexão com banco de dados PostgreSQL
+- [x] Criar entidade `ServicesCall`
+- [ ] Implementar repositório JPA (`ServicesCallRepository`)
+- [ ] Criar controller REST para operações CRUD
+- [ ] Adicionar camada de serviço (`Service`) para regras de negócio
+- [ ] Validar dados de entrada com `@Valid`
+- [ ] Implementar DTOs para entrada/saída de dados
+- [ ] Criar filtros de busca por status, técnico, data, etc.
+- [ ] Gerar relatórios simples (ex: atendimentos por período)
+
+### 🧪 Testes
+
+- [ ] Criar testes unitários para a camada de serviço
+- [ ] Criar testes de integração para os endpoints REST
+
+### 💅 Melhorias Futuras
+
+- [ ] Adicionar paginação e ordenação
+- [ ] Incluir autenticação (ex: JWT ou basic auth)
+- [ ] Implementar dashboard com estatísticas
+- [ ] Criar interface web (ex: com React ou Thymeleaf)
 
 ## 🏗️ Estrutura do Projeto
 ```bash
