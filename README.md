@@ -9,8 +9,8 @@ Este é um sistema web simples desenvolvido com **Spring Boot** e **PostgreSQL**
     - Spring Web
     - Spring Data JPA
 - PostgreSQL
-- Maven
-- Lombok (opcional)
+- Gradle
+- Lombok
 
 ## 🗃️ Funcionalidades
 
