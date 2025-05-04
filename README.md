@@ -45,20 +45,19 @@ src/
 | DELETE | `/`| TODO      |
 
 ## 🧪 Como rodar o projeto localmente
-1 - Clone este repositório:
-
-```bash
-git clone https://github.com//.git
-cd 
-Configure o banco de dados no application.yml.
-```
-Rode a aplicação com o Maven ou pela sua IDE:
-
-```bash
-./mvnw spring-boot:run
-Acesse:
-
-bash
-Copiar
-Editar
-http://localhost:8080/atendimentos
+1. Clone este repositório:
+   ```bash
+    git clone https://github.com/iagoscandido/servi-track.git
+    cd servi-track
+    ```
+2. Configure o banco de dados no `application.yml`.
+3. Rode a aplicação com o Maven ou pela sua IDE:
+    ```bash
+    ./mvnw spring-boot:run
+    ```
+4. Acesse:
+    ```bash
+    http://localhost:8080/
+    ```
+📄 Licença
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
