@@ -12,8 +12,8 @@ public class Cost {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(name = "description")
+	@Column(name = "description",nullable = false)
 	private String description;
-	@Column(name = "value")
+	@Column(name = "value", nullable = false)
 	private BigDecimal value;
 };
