@@ -21,18 +21,16 @@ public class CreateServiceScheduleService {
 			client.setName(dto.clientName().toLowerCase());
 			clientRepository.save(client);
 		}
-		
-		ServiceCallSchedule callSchedule = new ServiceCallSchedule();
-
-		callSchedule.setServiceScheduleDate(dto.serviceScheduleDate());
-		callSchedule.setServiceScheduleHour(dto.serviceScheduleHour());
-		callSchedule.setServiceDescription(dto.serviceDescription());
-		callSchedule.setClient(client);
-		callSchedule.setAddress(dto.address());
-		callSchedule.setServiceFee(dto.serviceFee());
-		callSchedule.setPaymentDate(dto.paymentDate());
 
 		ServiceCallSchedule entity = new ServiceCallSchedule();
+
+		entity.setServiceScheduleDate(dto.serviceScheduleDate());
+		entity.setServiceScheduleHour(dto.serviceScheduleHour());
+		entity.setServiceDescription(dto.serviceDescription());
+		entity.setClient(client);
+		entity.setAddress(dto.address());
+		entity.setServiceFee(dto.serviceFee());
+		entity.setPaymentDate(dto.paymentDate());
 
 		return repository.save(entity);
 	}
