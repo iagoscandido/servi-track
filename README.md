@@ -19,17 +19,17 @@ Este é um sistema web simples desenvolvido com **Spring Boot** e **PostgreSQL**
 - [x] Criar estrutura básica do projeto com Spring Boot
 - [x] Configurar conexão com banco de dados PostgreSQL
 - [x] Criar entidade `ServicesCall`
-- [ ] Implementar repositório JPA (`ServicesCallRepository`)
-- [ ] Criar controller REST para operações CRUD
-- [ ] Adicionar camada de serviço (`Service`) para regras de negócio
-- [ ] Validar dados de entrada com `@Valid`
-- [ ] Implementar DTOs para entrada/saída de dados
+- [x] Implementar repositório JPA (`ServicesCallRepository`)
+- [x] Criar controller REST para operações CRUD
+- [x] Adicionar camada de serviço (`Service`) para regras de negócio
+- [x] Validar dados de entrada com `@Valid`
+- [x] Implementar DTOs para entrada/saída de dados
 - [ ] Criar filtros de busca por status, técnico, data, etc.
 - [ ] Gerar relatórios simples (ex: atendimentos por período)
 
 ### 🧪 Testes
 
-- [ ] Criar testes unitários para a camada de serviço
+- [x] Criar testes unitários para a camada de serviço
 - [ ] Criar testes de integração para os endpoints REST
 
 ### 💅 Melhorias Futuras
@@ -45,22 +45,30 @@ src/
 ├── main/
 │ ├── java/
 │ │ └── com.iago.servi-track/
+│ │ ├── config/
 │ │ ├── controllers/
+│ │ ├── dto/
 │ │ ├── entities/
+│ │ ├── enums/
+│ │ ├── exceptions/
 │ │ ├── repositories/
 │ │ └── services/
 │ └── resources/
 │ ├── application.yml
+├── test/
+| ├── java/
+│ │ └── com.iago.servi-track/
+| │ │ └── services/
 ```
 
 ## 📡 Endpoints da API (exemplo)
 
-| Método | Rota                | Descrição |
-|--------|---------------------|-----------|
-| GET    | `/`     | TODO      |
-| POST   | `/`     | TODO      |
-| PUT    | `/`| TODO      |
-| DELETE | `/`| TODO      |
+| Método | Rota                            | Descrição                      |
+|--------|---------------------------------|--------------------------------|
+| GET    | `/`                             | TODO                           |
+| POST   | `/service-call-schedule/create` | cria um agendamento de chamado |
+| PUT    | `/`                             | TODO                           |
+| DELETE | `/`                             | TODO                           |
 
 ## 🧪 Como rodar o projeto localmente
 1. Clone este repositório:
