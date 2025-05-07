@@ -12,20 +12,15 @@ import java.time.LocalDateTime;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "client")
-public class Client
-{
+public class Client {
 	@Id
-
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
-	@Column(name="name", nullable = false)
+	@Column(name = "name", nullable = false)
 	private String name;
-
 	@CreatedDate
 	@Column(name = "created_at", updatable = false)
 	private LocalDateTime createdAt;
-
 	@LastModifiedDate
 	@Column(name = "updated_at")
 	private LocalDateTime updatedAt;

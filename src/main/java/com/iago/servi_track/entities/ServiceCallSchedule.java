@@ -32,19 +32,15 @@ public class ServiceCallSchedule {
 	private BigDecimal serviceFee;
 	@Column(name = "payment_date", nullable = false)
 	private LocalDate paymentDate;
-
 	@ManyToOne
 	@JoinColumn(name = "client_id")
 	private Client client;
-
 	@Enumerated(EnumType.STRING)
 	@Column(name = "payment_status", nullable = false)
 	private PaymentStatus paymentStatus = PaymentStatus.PENDING;
-
 	@CreatedDate
 	@Column(name = "created_at", nullable = false, updatable = false)
 	private LocalDateTime createdAt;
-
 	@LastModifiedDate
 	@Column(name = "updated_at")
 	private LocalDateTime updatedAt;
