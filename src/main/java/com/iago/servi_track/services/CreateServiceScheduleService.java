@@ -21,6 +21,8 @@ public class CreateServiceScheduleService {
 
 	public ServiceCallSchedule execute(ServiceCallScheduleDto dto) {
 		findDuplicate(dto.serviceScheduleDate(), dto.serviceScheduleHour());
+		validateDate(dto.serviceScheduleDate());
+		validateDate(dto.paymentDate());
 		Client client = new Client();
 
 		if ((clientRepository.findByName(dto.clientName())).isEmpty()) {
@@ -45,5 +47,11 @@ public class CreateServiceScheduleService {
 		Optional<ServiceCallSchedule> scheduleDateAndTime = repository.findByServiceScheduleDateAndServiceScheduleHour(date, time);
 		if (repository.findByServiceScheduleDateAndServiceScheduleHour(date, time).isPresent())
 			throw new ApiException("service already scheduled");
+	}
+
+	private void validateDate(LocalDate date) {
+		if (date.isBefore(LocalDate.now()) || date.isEqual(LocalDate.now())) {
+			throw new ApiException("Date must not be equal or before current date.");
+		}
 	}
 }
